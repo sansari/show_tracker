@@ -11,9 +11,26 @@
 </p>
 
 <p>
-  <strong>Photo url:</strong>
-  <%= @show.photo_url %>
+  <%= image_tag @show.photo_url, style: "width: 300px; height: 200px;" %>
 </p>
 
-<%= link_to 'Edit', edit_show_path(@show) %> |
-<%= link_to 'Back', shows_path %>
+<h2>Best Episodes:</h2>
+
+<table class="table">
+  <tr>
+    <th>Season</th>
+    <th>Episode #</th>
+    <th>Episode Name</th>
+    <th>Link</th>
+  </tr>
+<% @show.episodes.each do |episode| %>
+  <tr>
+    <td><%=episode.season%></td>
+    <td><%=episode.number%></td>
+    <td><%=episode.name%></td>
+    <td><%=link_to episode.url%></td>
+  </tr>
+<% end %>
+</table>
+
+<%= link_to 'Back', shows_path, class: 'btn' %>

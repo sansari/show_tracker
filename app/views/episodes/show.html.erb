@@ -2,7 +2,7 @@
 
 <p>
   <strong>Show:</strong>
-  <%= @episode.show_id %>
+  <%= link_to @episode.show.name, show_path(@episode.show) %>
 </p>
 
 <p>

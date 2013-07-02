@@ -8,8 +8,7 @@
       <th>Number</th>
       <th>Name</th>
       <th>Description</th>
-      <th>Url</th>
-      <th></th>
+      <th>Link</th>
       <th></th>
       <th></th>
     </tr>
@@ -18,15 +17,14 @@
   <tbody>
     <% @episodes.each do |episode| %>
       <tr>
-        <td><%= episode.show_id %></td>
+        <td><%= link_to episode.show.name, show_path(episode.show.id) %></td>
         <td><%= episode.season %></td>
         <td><%= episode.number %></td>
         <td><%= episode.name %></td>
         <td><%= episode.description %></td>
         <td><%= episode.url %></td>
-        <td><%= link_to 'Show', episode %></td>
-        <td><%= link_to 'Edit', edit_episode_path(episode) %></td>
-        <td><%= link_to 'Destroy', episode, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Edit', edit_episode_path(episode), class: 'btn btn-warning', style: 'color: #fff;' %></td>
+        <td><%= link_to 'Destroy', episode, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: #fff;' %></td>
       </tr>
     <% end %>
   </tbody>
@@ -34,4 +32,4 @@
 
 <br>
 
-<%= link_to 'New Episode', new_episode_path %>
+<%= link_to 'Add New Episode', new_episode_path, class: 'btn btn-success', style: 'color: #fff;' %>

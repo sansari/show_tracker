@@ -18,7 +18,7 @@
         <td><%= show.name %></td>
         <td><%= show.description %></td>
         <td><%= image_tag show.photo_url, style: 'width: 200px; height: 100px;' %></td>
-        <td><%= link_to 'Show', show, class: 'btn' %></td>
+        <td><%= link_to 'Visit', show, class: 'btn' %></td>
         <td><%= link_to 'Edit', edit_show_path(show), class: 'btn btn-warning', style: 'color: #fff;' %></td>
         <td><%= link_to 'Destroy', show, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger', style: 'color: #fff;' %></td>
       </tr>
