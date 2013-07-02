@@ -28,7 +28,7 @@
     <td><%=episode.season%></td>
     <td><%=episode.number%></td>
     <td><%=episode.name%></td>
-    <td><%=link_to episode.url%></td>
+    <td><%=link_to episode.url, episode.url, target: '_blank' %></td>
   </tr>
 <% end %>
 </table>
