@@ -11,3 +11,7 @@
  *= require_self
  *= require_tree .
  */
+
+body, p, ol, ul, a, div, td, th {
+  font-family: 'Istok Web', Arial, sans-serif !important;
+}
