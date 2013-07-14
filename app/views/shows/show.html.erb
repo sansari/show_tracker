@@ -1,20 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @show.name %>
-</p>
+<div>
+<div style="float:left;">
+  <h1><%= @show.name %></h1>
 
-<p>
-  <strong>Description:</strong>
-  <%= @show.description %>
-</p>
+  <h4><%= @show.description %></h4>
+</div>
+<div style="float:right;">
+  <p>
+    <%= image_tag @show.photo_url, style: "width: 200px; height: 150px;" %>
+  </p>
+</div>
+</div>
+<div style="clear:both;"></div>
 
-<p>
-  <%= image_tag @show.photo_url, style: "width: 300px; height: 200px;" %>
-</p>
-
-<h2>Best Episodes:</h2>
+<br/><br/>
 
 <table class="table">
   <tr>

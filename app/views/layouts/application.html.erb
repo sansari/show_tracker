@@ -40,16 +40,19 @@
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container">
+          <%=image_tag 'tracker_logo.png', :class => 'logo' %>
           <a class="btn btn-navbar" data-target=".nav-collapse" data-toggle="collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/">ShowTracker</a>
+
+          <a class="brand">ShowTracker</a>
+
           <div class="container nav-collapse" style="">
             <ul class="nav">
-              <li><%= link_to "Shows", shows_path  %></li>
-              <li><%= link_to "Episodes", episodes_path  %></li>
+              <li class="<%= "selected" if controller.controller_name == 'shows' %>"><%= link_to "Shows", shows_path  %></li>
+              <li class="<%= "selected" if controller.controller_name == 'episodes' %>"><%= link_to "Episodes", episodes_path  %></li>
             </ul>
           </div><!--/.nav-collapse -->
         </div>
@@ -60,7 +63,7 @@
         <div class="row">
           <div class="span9">
             <%= bootstrap_flash %>
-            <br/><br/><br/>
+            <br/><br/><br/><br/>
             <%= yield %>
           </div>
           <div class="span3" style="display:none;">
