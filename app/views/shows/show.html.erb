@@ -20,7 +20,8 @@
   <tr>
     <th>Season</th>
     <th>Episode #</th>
-    <th>Episode Name</th>
+    <th>Name</th>
+    <th>Description</th>
     <th>Link</th>
   </tr>
 <% @show.episodes.each do |episode| %>
@@ -28,6 +29,7 @@
     <td><%=episode.season%></td>
     <td><%=episode.number%></td>
     <td><%=episode.name%></td>
+    <td><%=episode.description%></td>
     <td><%=link_to episode.url, episode.url, target: '_blank' %></td>
   </tr>
 <% end %>
