@@ -3,9 +3,6 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.0'
 
-# Use sqlite3 as the database for Active Record
-gem 'pg'
-
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
 
@@ -27,13 +24,31 @@ gem 'turbolinks'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 1.2'
 
-gem "twitter-bootstrap-rails"
+gem 'twitter-bootstrap-rails'
+
+gem 'puma'
+
+gem 'newrelic_rpm'
 
 group :development do
+  gem 'better_errors'
+  gem 'jazz_hands'
+end
+
+group :development, :test do
   gem 'sqlite3'
+  gem 'rspec-rails'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'launchy'
+  gem 'database_cleaner', '1.0.1'
+  gem 'selenium-webdriver'
 end
 
 group :production do
+  gem 'pg'
   gem 'rails_log_stdout',           github: 'heroku/rails_log_stdout'
   gem 'rails3_serve_static_assets', github: 'heroku/rails3_serve_static_assets'
 end
