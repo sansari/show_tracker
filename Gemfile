@@ -42,7 +42,7 @@ end
 
 group :test do
   gem 'capybara'
-  gem 'launchy'
+  gem 'factory_girl'
   gem 'database_cleaner', '1.0.1'
   gem 'selenium-webdriver'
 end
