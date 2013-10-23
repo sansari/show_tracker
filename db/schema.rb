@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130702060653) do
+ActiveRecord::Schema.define(version: 20131023050726) do
 
   create_table "episodes", force: true do |t|
     t.integer  "show_id"
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 20130702060653) do
     t.string   "url"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "cast"
   end
 
   create_table "shows", force: true do |t|
