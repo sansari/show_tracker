@@ -30,6 +30,8 @@ gem 'puma'
 
 gem 'newrelic_rpm'
 
+gem 'redis'
+
 group :development do
   gem 'better_errors'
   gem 'jazz_hands'

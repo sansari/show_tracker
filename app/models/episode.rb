@@ -1,5 +1,7 @@
 class Episode < ActiveRecord::Base
-  serialize :cast, Array
+  include RedisSerialize
+
+  redis_serialize :cast
 
   belongs_to :show
 end
